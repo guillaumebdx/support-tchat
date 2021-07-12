@@ -27,6 +27,7 @@ class UserFixtures extends Fixture
                 $user,
                 'azerty'
             ));
+            $user->addRoom($this->getReference('room0'))->addRoom($this->getReference('room1'))->addRoom($this->getReference('room2'));
             $manager->persist($user);
             $this->addReference($name, $user);
         }
